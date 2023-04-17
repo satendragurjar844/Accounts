@@ -1,57 +1,0 @@
-::1	11-04-2023 01:04:35 PM	{
-"GroupId":"1",
-"Id":"1",
-"GroupName":"ABC test",
-"Status":"1",
-"AddedBy":"3",
-"OpeningBalance":"236"
-}::1	11-04-2023 01:04:35 PM	SELECT "ACCOUNT_ID" FROM accounts."accountMaster" where true  and "ACCOUNT_ID"=1 ::1	11-04-2023 01:04:59 PM	{
-"GroupId":"1",
-"Id":"SLB0001",
-"GroupName":"ABC test",
-"Status":"1",
-"AddedBy":"3",
-"OpeningBalance":"236"
-}::1	11-04-2023 01:04:59 PM	SELECT "ACCOUNT_ID" FROM accounts."accountMaster" where true  and "ACCOUNT_ID"=SLB0001 ::1	11-04-2023 01:06:20 PM	{
-"GroupId":"1",
-"Id":"SLB0001",
-"GroupName":"ABC test",
-"Status":"1",
-"AddedBy":"3",
-"OpeningBalance":"236"
-}::1	11-04-2023 01:06:20 PM	SELECT "ACCOUNT_ID" FROM accounts."accountMaster" where "ACCOUNT_ID"='SLB0001'::1	11-04-2023 01:06:54 PM	{
-"GroupId":"1",
-"Id":"SLB0001",
-"GroupName":"ABC test",
-"Status":"1",
-"AddedBy":"3",
-"OpeningBalance":"236"
-}::1	11-04-2023 01:06:54 PM	SELECT "ACCOUNT_ID" FROM accounts."accountMaster" where "ACCOUNT_ID"='SLB0001'::1	11-04-2023 01:06:54 PM	 Update accounts."accountMaster" set "GROUP_ID" = '1',"ACCOUNT_NAME"='',"STATUS"='0',"OPENING_BALANCE"='' where true  and "ACCOUNT_ID" = 'SLB0001' ;::1	11-04-2023 01:07:49 PM	{
-"GroupId":"1",
-"Id":"SLB0001",
-"AccountName":"ABC test",
-"Status":"1",
-"AddedBy":"3",
-"OpeningBal":"236"
-}::1	11-04-2023 01:07:49 PM	SELECT "ACCOUNT_ID" FROM accounts."accountMaster" where "ACCOUNT_ID"='SLB0001'::1	11-04-2023 01:07:49 PM	 Update accounts."accountMaster" set "GROUP_ID" = '1',"ACCOUNT_NAME"='ABC test',"STATUS"='0',"OPENING_BALANCE"='236' where true  and "ACCOUNT_ID" = 'SLB0001' ;::1	11-04-2023 01:08:48 PM	{
-"GroupId":"1",
-"Id":"SLB0002",
-"AccountName":"ABC ltd",
-"Status":"0",
-"AddedBy":"5"
-}::1	11-04-2023 01:08:48 PM	SELECT "ACCOUNT_ID" FROM accounts."accountMaster" where "ACCOUNT_ID"='SLB0002'::1	11-04-2023 01:09:19 PM	{
-"GroupId":"1",
-"Id":"SLB0002",
-"AccountName":"ABC ltd",
-"Status":"0",
-"AddedBy":"5"
-}::1	11-04-2023 01:09:19 PM	SELECT "ACCOUNT_ID" FROM accounts."accountMaster" where "ACCOUNT_ID"='SLB0002'::1	11-04-2023 01:09:19 PM	Insert into accounts."accountMaster" ("ACCOUNT_NAME","DATE_ADDED","GROUP_ID","ACCOUNT_ID","ADDED_BY") Values ('ABC ltd','2023-04-11 01:09:19','','SLB0002','0');::1	11-04-2023 01:10:27 PM	{
-"GroupId":"1",
-"Id":"SLB0002",
-"AccountName":"ABC ltd",
-"Status":"0",
-"AddedBy":"5"
-}::1	11-04-2023 01:10:27 PM	SELECT "ACCOUNT_ID" FROM accounts."accountMaster" where "ACCOUNT_ID"='SLB0002'::1	11-04-2023 01:10:27 PM	Insert into accounts."accountMaster" ("ACCOUNT_NAME","DATE_ADDED","GROUP_ID","ACCOUNT_ID","ADDED_BY") Values ('ABC ltd','2023-04-11 01:10:27','1','SLB0002','5');::1	11-04-2023 01:10:49 PM	Entering in Account Group Page::1	11-04-2023 01:10:49 PM	::1	11-04-2023 01:10:49 PM	Query to extract the records-----
-SELECT * FROM accounts."accountMaster" WHERE true   ::1	11-04-2023 01:19:37 PM	Entering in Account Group Page::1	11-04-2023 01:19:37 PM	::1	11-04-2023 01:19:37 PM	Query to extract the records-----
-SELECT * FROM accounts."accountMaster" WHERE true   ::1	11-04-2023 03:37:12 PM	Entering in Account Group Page::1	11-04-2023 03:37:12 PM	::1	11-04-2023 03:37:12 PM	Query to extract the records-----
-SELECT * FROM accounts."accountMaster" WHERE true   
