@@ -6,7 +6,7 @@ include 'config/function.php';
 if($_SERVER['HTTP_HOST']=='localhost' || $_SERVER['HTTP_HOST']=='127.0.0.1'){
   $serverurl = "http://";
   $serverurl .= $_SERVER['HTTP_HOST'];
-  $serverurl .= "/Account/"; 
+  $serverurl .= "/Accounts/"; 
 }
 
 else{
