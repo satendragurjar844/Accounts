@@ -31,7 +31,7 @@ $arrayDataRows = array();
 
 try {
 
-$DataEntryQuery = "SELECT * FROM accounts.\"VoucherEntry\" WHERE true _vno _date _type";
+$DataEntryQuery = "SELECT * FROM accounts.\"voucherEntry\" WHERE true _vno _date _type";
 
 $DataEntryQuery = str_replace("_date",$DateAdded!=''?" and \"DateAdded\"='".$DateAdded."' ":"",$DataEntryQuery );
 
@@ -43,23 +43,22 @@ MISuploadlogger("Query to extract the records-----\n".$DataEntryQuery);
 
 $getDatafromData = pg_query(OpenCon(), $DataEntryQuery);
 
-$i=1;
+$dataList =  pg_fetch_assoc($getDatafromData);
+
 while ($dataList =  pg_fetch_assoc($getDatafromData)){
 
    $objDataTable = new clsDataTable();
 
-   $objDataTable->Id =$dataList['Id'];
+   $objDataTable->Id =$dataList['VID'];
    $objDataTable->VoucherDate =$dataList['VoucherDate'];
    $objDataTable->VoucherNo =$dataList['VoucherNo'];
    $objDataTable->Type =$dataList['Type'];
    $objDataTable->DateAdded =$dataList['DateAdded'];
-   $objDataTable->JsonData =$dataList['JSON'];
+   $objDataTable->JsonData =$dataList['JsonData'];
    $objDataTable->AddedBy =$dataList['AddedBy'];
    $objDataTable->Note =$dataList['Note'];
    
    $a = array_push($arrayDataRows,$objDataTable);
-
-   $i++;
 
 }  
 
