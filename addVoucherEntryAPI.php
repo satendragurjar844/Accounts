@@ -6,7 +6,7 @@ $parameterdata = file_get_contents('php://input');
 $parameterdata = str_replace("null","\"\"",$parameterdata);
 //MISuploadlogger($parameterdata);
 
-// {
+// {   
 //  "VoucherNo": "",
 //   "VoucherDate": "2023-03-02",
 //   "Note": "test",
@@ -27,7 +27,7 @@ $parameterdata = str_replace("null","\"\"",$parameterdata);
 //     }
 //   ]
 // }
-
+$var ='';
 $dataToShare = json_decode($parameterdata);
 
 $VoucherNo = $dataToShare->VoucherNo;
